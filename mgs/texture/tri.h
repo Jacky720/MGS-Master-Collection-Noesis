@@ -14,7 +14,8 @@ struct GsTex0
 	uint64_t CBP : 14; // CLUT Buffer Base Pointer
 	uint64_t CPSM : 4; // CLUT Storage Format
 	uint64_t CSM : 1; // CLUT Storage Mode
-	uint64_t CSA : 5; // CLUT Offset
+	uint64_t CSAX : 1; // CLUT Offset X
+	uint64_t CSAY : 4; // CLUT Offset Y
 	uint64_t CLD : 3; // CLUT Load Control
 };
 

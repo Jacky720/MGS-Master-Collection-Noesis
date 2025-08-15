@@ -181,7 +181,7 @@ uint8_t* Tri::getTextureIndexed(int idx, int& size)
 
 	if ((info->registerInfo2.CPSM == 0) && (info->registerInfo2.CSM == 0))
 	{
-		readTexPSMCT32(info->registerInfo2.CBP, 1, (int)(info->registerInfo2.CSA * 8), 0, clutWidth, clutHeight, 1, (void*)clutBuffer);
+		readTexPSMCT32(info->registerInfo2.CBP, 1, (int)(info->registerInfo2.CSAX * 8), (int)(info->registerInfo2.CSAY * 2), clutWidth, clutHeight, 1, (void*)clutBuffer);
 		if (info->registerInfo2.PSM == 0x13) unswizzleClut(clutBuffer);
 	}
 	else
